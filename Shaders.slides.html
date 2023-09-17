@@ -14641,52 +14641,221 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Quick-Introduction-to-Shaders">Quick Introduction to Shaders<a class="anchor-link" href="#Quick-Introduction-to-Shaders">&#182;</a></h1>
+<h1 id="Shaders">Shaders<a class="anchor-link" href="#Shaders">&#182;</a></h1><p><img src="capture.gif" width="800" align="right"/></p>
+<h3 id="A-quick-overview-by-Lester-Bonilla">A quick overview by Lester Bonilla<a class="anchor-link" href="#A-quick-overview-by-Lester-Bonilla">&#182;</a></h3>
 </div>
 </div>
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>What are shaders?</p>
-<p>How have shaders evolved over time?</p>
-<p>How do graphics cards display shaders?</p>
-<p>What are the current technologies used in shaders?</p>
+<h2 id="What-are-Shaders?">What are Shaders?<a class="anchor-link" href="#What-are-Shaders?">&#182;</a></h2><p><p> Shaders are programs that calculate the values of <b>pixels</b> of an image in order to create depth, lighting, and other effects. This is very similar to shading techniques in physical art media.</p></p>
+<p><p> 3D shapes are 'rasterized' into a 2D image of pixels to realize them on a screen. The shader then manipulates each pixel to approximate the effects.</p></p>
+<p><p> Pixels are manipulated via vectors that contain information about what each pixel on the screen should be displaying. </p></p>
+<p><p> There are two vectors used by shaders: <b>Fragment vectors</b> and <b>Vertex vectors</b></p>
+
 </div>
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="What-are-Shaders?">What are Shaders?<a class="anchor-link" href="#What-are-Shaders?">&#182;</a></h2><p><p> Shaders are programs that calculate the values of pixels on a screen in order to create depth, lighting, and other effects on displayed images.</p>
+<h1 id="Pixels">Pixels<a class="anchor-link" href="#Pixels">&#182;</a></h1><p><p>A pixel is the smallest unit in a raster image (an image made of a grid of square units).</p>
+Each pixel has a Red, Green, Blue, and Alpha (opacity) property. The color of a pixel is determined by these values, and is represented by a vector.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Manipulation-of-Pixels">Manipulation of Pixels<a class="anchor-link" href="#Manipulation-of-Pixels">&#182;</a></h1><p> Image editors manipulate pixels to produce effects. Here is an example of a multiply blending mode I implemented in a class project, for demonstration. Images owned by UF.</p> The multiply mode combines the images, darkening the color wheel and keeping the pattern from the first image.
+<p> Press the down arrow on the screen to view examples </p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p> <img src="pattern1.png" width="500" align="left"/></p> 
+<p> <img src="layer1.png" width="500" align="right"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p> <img src="multiply.png" width="600" align=""/></p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Fragment/Pixel-Vectors">Fragment/Pixel Vectors<a class="anchor-link" href="#Fragment/Pixel-Vectors">&#182;</a></h1><p>Determine the color of each pixel via RGBA values, written as RGBA. Used in 2D shading. Functions are performed on these vectors that can change the image displayed based on time, input, such as cursor location, and other events.</p>
+<h1 id="Vertex-Vectors">Vertex Vectors<a class="anchor-link" href="#Vertex-Vectors">&#182;</a></h1><p>Describe the position of a vertex in a 3D model. Manipulation of vertex vectors is used to apply 2D textures onto 3D models.</p>
 
-     </div>
 </div>
 </div>
 </div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="The-GPU">The GPU<a class="anchor-link" href="#The-GPU">&#182;</a></h2><p>Shaders perform similar instructions on thousands of pixels many times per second. Since the instructions are similar, they are performed through <b>parallel processing.</b> As computer graphics became more advanced, it made sense to develop a separate processing unit to execute these instructions so that the CPU could be unburdened. Performant GPUs are necessary to play the latest games and to perform heavy video editing and rendering.</p>
+<h2 id="Shading-Languages">Shading Languages<a class="anchor-link" href="#Shading-Languages">&#182;</a></h2><p>There are specific languages developed for programming shaders. The most common ones are OpenGL Shading Language (GLSL) and Direct3D High Level Shading Language. Apple has recently created a shading language they call Metel.</p>
 
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="ShaderToy"><a href="shadertoy.com/new">ShaderToy</a><a class="anchor-link" href="#ShaderToy">&#182;</a></h1><p>A website that allows you to code shaders and pixel vectors and see how they affect an image. Uses the shading language GLSL, which is modeled after the C language. In this image, the shader is setting all pixels of the screen to display only green values. Press the down arrow to see more examples of manipulting the color values.</p>
+<p><img src="allgreen.png" width="900" align="center"/></p>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="allred.png" width="1200" align="center"/></p>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="purple.png" width="1200" align="center"/></p>
+
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Fractals-in-Shadertoy">Fractals in Shadertoy<a class="anchor-link" href="#Fractals-in-Shadertoy">&#182;</a></h1><p>I followed this <a href="https://www.youtube.com/watch?v=8bbTkNZYdQ8">tutroial</a> to explore different features of GLSL and Shadertoy to create fractal images. The shader creates a similar shape via the colors for each quadrant of the screen, and randomizes that shape based on the computer time.
+<img src="fractal1.gif" width="1100"  align="center"/></p>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="fractal2.gif" align="center"/></p>
+
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Ray-Tracing">Ray Tracing<a class="anchor-link" href="#Ray-Tracing">&#182;</a></h1><p>A relatively recent turn in computer graphics, <b>ray tracing</b> is a different process of rendering images compared to rasterization. Rasterization creates the illusion of depth by approximating shadows and scaling. <p>Ray tracing instead tracks beams of light from a point of view and calculates how they would bounce off of and interact with objects in a scene. This creates a much more realistic and detailed image, with the cost of being extremely computationally expensive. </p></p>
+<p><p> Ray tracing is used in animated films which are rendered with the use of server farms. An average scene from the movie Toy Story 3 took 7 hours to render, with some frames taking up to 39 hours.</p>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><img src="raytracingexample.png" width="900" align="center"/></p>
+
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Example taken from wikipedia page: <a href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)#/media/File:Glasses_800_edit.png">https://en.wikipedia.org/wiki/Ray_tracing_(graphics)#/media/File:Glasses_800_edit.png</a></p>
+
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Surface-of-the-Surface">Surface of the Surface<a class="anchor-link" href="#Surface-of-the-Surface">&#182;</a></h1><p>In this quick overview I have only touched on the fundamentals. There is a plethora of work being done in computer graphics and much to learn. Through reading wikipedia pages for direction and youTube tutorials for guidance, I have learned a lot about something that seemed esoteric and inaccessible. </p><p> The most impressive thing I learned was that ray tracing can be used with audio to create more immersive sound representation. Audio waves are traced in a similar fashion and the sound is affected by bouncing off of items in a scene! </p><p>Topics that I can dive in from here include tesselation, shading techniques (gouraud, phong, flat vs smooth), and the implementation of shading in simple games like Minecraft and Terraria. </p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Thank-you-for-visiting-my-Shader-Overview!">Thank you for visiting my Shader Overview!<a class="anchor-link" href="#Thank-you-for-visiting-my-Shader-Overview!">&#182;</a></h1>
+</div>
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
