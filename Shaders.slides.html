@@ -14656,7 +14656,7 @@ div.jp-OutputPrompt {
 <h2 id="What-are-Shaders?">What are Shaders?<a class="anchor-link" href="#What-are-Shaders?">&#182;</a></h2><p><p> Shaders are programs that calculate the values of <b>pixels</b> of an image in order to create depth, lighting, and other effects. This is very similar to shading techniques in physical art media.</p></p>
 <p><p> 3D shapes are 'rasterized' into a 2D image of pixels to realize them on a screen. The shader then manipulates each pixel to approximate the effects.</p></p>
 <p><p> Pixels are manipulated via vectors that contain information about what each pixel on the screen should be displaying. </p></p>
-<p><p> There are two vectors used by shaders: <b>Fragment vectors</b> and <b>Vertex vectors</b></p>
+<p><p> There are two vectors used by shaders: <b>Fragment vectors</b> and <b>Vertex vectors.</b></p>
 
 </div>
 </div>
@@ -14718,8 +14718,8 @@ Each pixel has a Red, Green, Blue, and Alpha (opacity) property. The color of a 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Fragment/Pixel-Vectors">Fragment/Pixel Vectors<a class="anchor-link" href="#Fragment/Pixel-Vectors">&#182;</a></h1><p>Determine the color of each pixel via RGBA values, written as RGBA. Used in 2D shading. Functions are performed on these vectors that can change the image displayed based on time, input, such as cursor location, and other events.</p>
-<h1 id="Vertex-Vectors">Vertex Vectors<a class="anchor-link" href="#Vertex-Vectors">&#182;</a></h1><p>Describe the position of a vertex in a 3D model. Manipulation of vertex vectors is used to apply 2D textures onto 3D models.</p>
+<h1 id="Fragment/Pixel-Vectors">Fragment/Pixel Vectors<a class="anchor-link" href="#Fragment/Pixel-Vectors">&#182;</a></h1><p>These hold the color of each pixel via RGBA values. Functions are performed on these vectors that can change the image displayed based on time, input and other events.</p>
+<h1 id="Vertex-Vectors">Vertex Vectors<a class="anchor-link" href="#Vertex-Vectors">&#182;</a></h1><p>These hold the position of a vertex in space and information about the depth of a point in space.</p>
 
 </div>
 </div>
@@ -14732,7 +14732,7 @@ Each pixel has a Red, Green, Blue, and Alpha (opacity) property. The color of a 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="The-GPU">The GPU<a class="anchor-link" href="#The-GPU">&#182;</a></h2><p>Shaders perform similar instructions on thousands of pixels many times per second. Since the instructions are similar, they are performed through <b>parallel processing.</b> As computer graphics became more advanced, it made sense to develop a separate processing unit to execute these instructions so that the CPU could be unburdened. Performant GPUs are necessary to play the latest games and to perform heavy video editing and rendering.</p>
-<h2 id="Shading-Languages">Shading Languages<a class="anchor-link" href="#Shading-Languages">&#182;</a></h2><p>There are specific languages developed for programming shaders. The most common ones are OpenGL Shading Language (GLSL) and Direct3D High Level Shading Language. Apple has recently created a shading language they call Metel.</p>
+<h2 id="Shading-Languages">Shading Languages<a class="anchor-link" href="#Shading-Languages">&#182;</a></h2><p>There are specific languages developed for programming shaders. The most common ones are OpenGL Shading Language (GLSL) and Direct3D High Level Shading Language. Apple recently released a shading language called Metel.</p>
 
 </div>
 </div>
@@ -14744,7 +14744,7 @@ Each pixel has a Red, Green, Blue, and Alpha (opacity) property. The color of a 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="ShaderToy"><a href="shadertoy.com/new">ShaderToy</a><a class="anchor-link" href="#ShaderToy">&#182;</a></h1><p>A website that allows you to code shaders and pixel vectors and see how they affect an image. Uses the shading language GLSL, which is modeled after the C language. In this image, the shader is setting all pixels of the screen to display only green values. Press the down arrow to see more examples of manipulting the color values.</p>
+<h1 id="ShaderToy"><a href="https://shadertoy.com/new">ShaderToy</a><a class="anchor-link" href="#ShaderToy">&#182;</a></h1><p>ShaderToy is a website that allows you to code shaders and pixel vectors and see how they affect an image. It uses the shading language GLSL, which is modeled after the C language. In this image, the shader is setting all pixels of the screen to display only green values. Press the down arrow to see more examples of manipulting the color values.</p>
 <p><img src="allgreen.png" align="center"/></p>
 
 </div>
@@ -14781,7 +14781,7 @@ Each pixel has a Red, Green, Blue, and Alpha (opacity) property. The color of a 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Fractals-in-Shadertoy">Fractals in Shadertoy<a class="anchor-link" href="#Fractals-in-Shadertoy">&#182;</a></h1><p>I followed this <a href="https://www.youtube.com/watch?v=8bbTkNZYdQ8">tutroial</a> to explore different features of GLSL and Shadertoy to create fractal images. The shader creates a similar shape via the colors for each quadrant of the screen, and randomizes that shape based on the computer time.
+<h1 id="Fractals-in-Shadertoy">Fractals in Shadertoy<a class="anchor-link" href="#Fractals-in-Shadertoy">&#182;</a></h1><p>I followed this <a href="https://www.youtube.com/watch?v=8bbTkNZYdQ8">tutorial</a> to explore different features of GLSL and Shadertoy to create fractal images. The shader creates a similar shape via the colors for each quadrant of the screen, and randomizes that shape based on the computer time.
 <img src="fractal1.gif" width="1100"  align="center"/></p>
 
 </div>
@@ -14807,8 +14807,8 @@ Each pixel has a Red, Green, Blue, and Alpha (opacity) property. The color of a 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Ray-Tracing">Ray Tracing<a class="anchor-link" href="#Ray-Tracing">&#182;</a></h1><p>A relatively recent turn in computer graphics, <b>ray tracing</b> is a different process of rendering images compared to rasterization. Rasterization creates the illusion of depth by approximating shadows and scaling. <p>Ray tracing instead tracks beams of light from a point of view and calculates how they would bounce off of and interact with objects in a scene. This creates a much more realistic and detailed image, with the cost of being extremely computationally expensive. </p></p>
-<p><p> Ray tracing is used in animated films which are rendered with the use of server farms. An average scene from the movie Toy Story 3 took 7 hours to render, with some frames taking up to 39 hours.</p>
-
+<p> Ray tracing is used in animated films which are rendered with the use of server farms. An average frame from the movie Toy Story 3 took 7 hours to render, with some frames taking up to 39 hours!
+<p> Scroll down for an image generated through ray tracing, sourced from wikipedia and linked below the image.</p>
 </div>
 </div>
 </div>
@@ -14843,7 +14843,7 @@ Each pixel has a Red, Green, Blue, and Alpha (opacity) property. The color of a 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Surface-of-the-Surface">Surface of the Surface<a class="anchor-link" href="#Surface-of-the-Surface">&#182;</a></h1><p>In this quick overview I have only touched on the fundamentals. There is a plethora of work being done in computer graphics and much to learn. Through reading wikipedia pages for direction and youTube tutorials for guidance, I have learned a lot about something that seemed esoteric and inaccessible. </p><p> The most impressive thing I learned was that ray tracing can be used with audio to create more immersive sound representation. Audio waves are traced in a similar fashion and the sound is affected by bouncing off of items in a scene! </p><p>Topics that I can dive in from here include tesselation, shading techniques (gouraud, phong, flat vs smooth), and the implementation of shading in simple games like Minecraft and Terraria. </p>
+<h1 id="Surface-of-the-Surface">Surface of the Surface<a class="anchor-link" href="#Surface-of-the-Surface">&#182;</a></h1><p>In this quick overview I have only touched on the fundamentals. There is a plethora of work being done in computer graphics and much to learn. Through reading wikipedia pages for direction and youtube tutorials for guidance, I have learned a lot about something that seemed esoteric and inaccessible. </p><p> The most impressive thing I learned was that ray tracing can be used with audio to create more immersive sound representation. Audio waves are traced in a similar fashion and the sound is affected by bouncing off of items in a scene! </p><p>Topics that I can dive in from here include tesselation, shading techniques (gouraud, phong, flat vs smooth), and the implementation of shading in simple games like Minecraft and Terraria. </p>
 </div>
 </div>
 </div>
